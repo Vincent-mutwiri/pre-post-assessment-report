@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.j
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, Cell } from 'recharts'
 import { TrendingUp, Users, Award, BarChart3, FileText, Download } from 'lucide-react'
 import './App.css'
+import { Analytics } from '@vercel/analytics/react'
 
 // Sample data - in a real app, this would be loaded from the CSV
 const performanceData = [

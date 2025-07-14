@@ -142,3 +142,113 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+
+### React/Vite ###
+# Build output directories
+/dist
+/build
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Local development files
+next-env.d.ts
+
+# Local history
+.history
+
+# Local npm cache
+.npm
+
+# Local pnpm cache
+.pnpm-store
+
+# Local yarn cache
+.yarn/cache
+
+# Local Vite cache
+.node_modules/.vite
+
+# Local Next.js cache
+.next
+out
+
+# Local TypeScript cache
+*.tsbuildinfo
+
+# Local ESLint cache
+.eslintcache
+
+# Local stylelint cache
+.stylelintcache
+
+# Local build artifacts
+*.log
+*.map
+
+# Local coverage reports
+coverage/
+.nyc_output/
+
+# Local test files
+__tests__/
+*.test.js
+*.spec.js
+
+# Local development server files
+*.hot-update.*
+hot-update.json
+
+# Local development build files
+*.gz
+*.br
+*.map
+
+# Local development configuration
+*.local
+*.example
+
+# Local development logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local development backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.orig*
+
+# Local development temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Local development lock files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Local development build files
+*.min.*
+*.gz
+*.br
+
+# Local development cache files
+.cache/
+.next/
+out/
+.svelte-kit/
