@@ -82,10 +82,10 @@ function App() {
                 <FileText className="w-4 h-4 mr-1" />
                 Generated Report
               </Badge>
-              <Button variant="outline" size="sm">
+              <a href="/performance_report.pdf" download="performance_report.pdf" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-medium bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 shadow-sm">
                 <Download className="w-4 h-4 mr-2" />
-                Export PDF
-              </Button>
+                Download Report
+              </a>
             </div>
           </div>
         </div>
