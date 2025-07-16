@@ -64,9 +64,9 @@ function AssessmentDashboard() {
   })).sort((a, b) => a.scoreChange - b.scoreChange);
 
   const getChangeColor = (change) => {
-    if (change > 4000) return 'hsl(var(--primary))';
-    if (change > 2000) return 'hsl(var(--ring))';
-    return 'hsl(var(--warning))';
+    if (change > 4000) return 'hsl(var(--success))';
+    if (change > 2000) return 'hsl(var(--primary))';
+    return 'hsl(var(--ring))';
   };
 
   if (loading) {
@@ -129,7 +129,7 @@ function AssessmentDashboard() {
               <TrendingUp className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-green-600">+{performanceStats.meanChange.toFixed(0)}</div>
+              <div className="text-2xl font-bold text-success">+{performanceStats.meanChange.toFixed(0)}</div>
               <p className="text-xs text-muted-foreground">
                 Points gained on average
               </p>
@@ -226,11 +226,11 @@ function AssessmentDashboard() {
                     </div>
                     <div className="flex justify-between items-center">
                       <span>Mean Score Change</span>
-                      <span className="font-semibold text-green-600">+{performanceStats.meanChange.toFixed(2)}</span>
+                      <span className="font-semibold text-success">+{performanceStats.meanChange.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span>Improvement Rate</span>
-                      <span className="font-semibold text-green-600">
+                      <span className="font-semibold text-success">
                         {((performanceStats.meanChange / performanceStats.meanDay1) * 100).toFixed(1)}%
                       </span>
                     </div>
@@ -276,7 +276,7 @@ function AssessmentDashboard() {
                                   <p className="font-semibold">{data.name}</p>
                                   <p>Day 1: {data.x}</p>
                                   <p>Day 2: {data.y}</p>
-                                  <p className="text-primary">Change: +{data.change}</p>
+                                  <p className="text-success">Change: +{data.change}</p>
                                 </div>
                               );
                             }
@@ -356,7 +356,7 @@ function AssessmentDashboard() {
                             <td className="p-3 text-right">{participant.day1Score.toLocaleString()}</td>
                             <td className="p-3 text-right">{participant.day2Score.toLocaleString()}</td>
                             <td className="p-3 text-right">
-                              <span className="text-primary font-semibold">
+                              <span className="text-success font-semibold">
                                 +{participant.scoreChange.toLocaleString()}
                               </span>
                             </td>
