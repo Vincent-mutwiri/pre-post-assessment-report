@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button.jsx'
 import { Badge } from '@/components/ui/badge.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs.jsx'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, Cell } from 'recharts'
-import { TrendingUp, Users, Award, BarChart3, FileText, Download } from 'lucide-react'
+import { TrendingUp, Users, Award, BarChart3, Download } from 'lucide-react'
 import './App.css'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -79,13 +79,13 @@ function App() {
               </p>
             </div>
             <div className="flex items-center space-x-4">
-              <Badge variant="secondary" className="text-sm">
-                <FileText className="w-4 h-4 mr-1" />
-                Generated Report
-              </Badge>
-              <a href="/performance_report.pdf" download="performance_report.pdf" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-medium bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 shadow-sm">
+              <a href="/Day_1_LearningScience_Deepdive.xlsx" download="Day_1_LearningScience_Deepdive.xlsx" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-medium bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 shadow-sm">
                 <Download className="w-4 h-4 mr-2" />
-                Download Report
+                Day 1 Report
+              </a>
+              <a href="/Day_2_LearningScience_Deepdive.xlsx" download="Day_2_LearningScience_Deepdive.xlsx" className="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-medium bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 shadow-sm">
+                <Download className="w-4 h-4 mr-2" />
+                Day 2 Report
               </a>
             </div>
           </div>
@@ -457,4 +457,3 @@ function App() {
 }
 
 export default App
-
