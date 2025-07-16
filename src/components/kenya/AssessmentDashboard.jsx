@@ -57,22 +57,22 @@ function AssessmentDashboard() {
   })).sort((a, b) => a.scoreChange - b.scoreChange);
 
   const getChangeColor = (change) => {
-    if (change > 4000) return '#22c55e'; // green
-    if (change > 2000) return '#3b82f6'; // blue
-    return '#f59e0b'; // amber
+    if (change > 4000) return 'hsl(var(--primary))';
+    if (change > 2000) return 'hsl(var(--ring))';
+    return 'hsl(var(--warning))';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white dark:bg-gray-900 shadow-sm border-b">
+      <header className="bg-card shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-3xl font-bold text-foreground">
                 Learning Science Deepdive Performance Report
               </h1>
-              <p className="text-gray-600 dark:text-gray-300 mt-2">
+              <p className="text-muted-foreground mt-2">
                 Comprehensive analysis of participant performance across Day 1 and Day 2
               </p>
             </div>
@@ -256,18 +256,18 @@ function AssessmentDashboard() {
                             if (active && payload && payload.length) {
                               const data = payload[0].payload;
                               return (
-                                <div className="bg-white p-3 border rounded shadow">
+                                <div className="bg-popover text-popover-foreground p-3 border rounded shadow">
                                   <p className="font-semibold">{data.name}</p>
                                   <p>Day 1: {data.x}</p>
                                   <p>Day 2: {data.y}</p>
-                                  <p className="text-green-600">Change: +{data.change}</p>
+                                  <p className="text-primary">Change: +{data.change}</p>
                                 </div>
                               );
                             }
                             return null;
                           }}
                         />
-                        <Scatter data={scatterData} fill="#3b82f6" />
+                        <Scatter data={scatterData} fill="hsl(var(--primary))" />
                       </ScatterChart>
                     </ResponsiveContainer>
                   </div>
@@ -335,12 +335,12 @@ function AssessmentDashboard() {
                       {performanceData
                         .sort((a, b) => b.scoreChange - a.scoreChange)
                         .map((participant, index) => (
-                          <tr key={participant.player} className="border-b hover:bg-gray-50 dark:hover:bg-gray-800">
+                          <tr key={participant.player} className="border-b hover:bg-accent/50 transition-colors">
                             <td className="p-3 font-medium">{participant.player}</td>
                             <td className="p-3 text-right">{participant.day1Score.toLocaleString()}</td>
                             <td className="p-3 text-right">{participant.day2Score.toLocaleString()}</td>
                             <td className="p-3 text-right">
-                              <span className="text-green-600 font-semibold">
+                              <span className="text-primary font-semibold">
                                 +{participant.scoreChange.toLocaleString()}
                               </span>
                             </td>
@@ -451,7 +451,7 @@ function AssessmentDashboard() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white dark:bg-gray-900 border-t mt-12">
+      <footer className="bg-card border-t mt-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <p className="text-sm text-muted-foreground">

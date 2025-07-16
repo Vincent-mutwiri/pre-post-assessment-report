@@ -76,9 +76,9 @@ const FeedbackTab = () => {
 
   const MetricCard = ({ title, value, icon: Icon, description, color = 'blue' }) => {
     const colorClasses = {
-      blue: 'from-blue-50 to-blue-100 border-blue-200 text-blue-800',
-      green: 'from-green-50 to-green-100 border-green-200 text-green-800',
-      purple: 'from-purple-50 to-purple-100 border-purple-200 text-purple-800',
+      blue: 'from-blue-50 to-blue-100 border-blue-200 text-blue-800 bg-white',
+      green: 'from-green-50 to-green-100 border-green-200 text-green-800 bg-white',
+      purple: 'from-purple-50 to-purple-100 border-purple-200 text-purple-800 bg-white',
     };
 
     return (
@@ -139,7 +139,7 @@ const FeedbackTab = () => {
       </div>
 
       {/* Key Metrics */}
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-3 [&>div]:shadow-sm">
         <MetricCard 
           title="Overall Value" 
           value={currentData.overall_value_avg} 

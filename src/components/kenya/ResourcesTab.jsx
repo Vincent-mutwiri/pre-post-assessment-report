@@ -41,9 +41,9 @@ const resources = [
 const ResourcesTab = () => {
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 [&>div]:shadow-sm">
         {resources.map((resource, index) => (
-          <Card key={index} className="flex flex-col">
+          <Card key={index} className="flex flex-col bg-white">
             <CardHeader className="pb-2">
               <div className="flex items-center space-x-2">
                 {resource.icon}
@@ -57,7 +57,7 @@ const ResourcesTab = () => {
               </p>
             </CardContent>
             <div className="px-6 pb-4">
-              <Button variant="outline" className="w-full" asChild>
+              <Button variant="outline" className="w-full bg-white hover:bg-accent/50" asChild>
                 <a href={resource.url} target="_blank" rel="noopener noreferrer">
                   {resource.action === 'Download' && <Download className="mr-2 h-4 w-4" />}
                   {resource.action}
