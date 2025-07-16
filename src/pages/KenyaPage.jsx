@@ -30,20 +30,26 @@ function KenyaPage() {
         {/* Header/Title for the Kenya Page */}
         <div className="mb-6 text-center">
             <h1 className="text-3xl font-bold">Kenya Deepdive Session</h1>
-            <p className="text-muted-foreground">iHUB Kenya Cohort - 2025</p>
+            <p className="text-muted-foreground">iHUB Kenya Cohort 3 - 2025</p>
         </div>
         
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-2 border-b pb-4 mb-6">
+        <div className="flex flex-wrap justify-center gap-3 border-b pb-4 mb-6">
           {TABS.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              className={`px-5 py-2.5 rounded-lg font-medium transition-all duration-200 ease-in-out transform hover:scale-105 ${
                 activeTab === tab
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-transparent hover:bg-accent'
+                  ? 'bg-primary text-primary-foreground shadow-md border border-primary/20'
+                  : 'bg-white text-foreground border border-gray-200 hover:border-primary/30 hover:shadow-sm hover:bg-accent/50'
               }`}
+              style={{
+                minWidth: 'fit-content',
+                boxShadow: activeTab === tab 
+                  ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                  : '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
+              }}
             >
               {tab}
             </button>

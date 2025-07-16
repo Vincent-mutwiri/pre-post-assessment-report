@@ -9,7 +9,7 @@ function LandingPage() {
         className="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1523580846011-d3a5bc25708a?auto=format&fit=crop&w=1600&q=80)",
+            "url(public/_M5A6541.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -45,7 +45,7 @@ function LandingPage() {
           <p className="text-muted-foreground">Avg. Improvement</p>
         </div>
         <div>
-          <h3 className="text-3xl font-bold">100%</h3>
+          <h3 className="text-3xl font-bold">95%</h3>
           <p className="text-muted-foreground">Positive Feedback</p>
         </div>
       </section>

@@ -26,7 +26,7 @@ const resources = [
     description: 'Photos from the training sessions',
     icon: <Image className="h-5 w-5 text-green-500" />,
     action: 'View',
-    url: '#',
+    url: 'https://drive.google.com/drive/folders/1Sqa-jrm9Cx3pkxlJ2Am1tMo3dVTubUZN',
   },
   {
     title: 'Additional Reading',
