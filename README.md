@@ -71,6 +71,7 @@ The website is optimized for performance with:
 - Compressed assets
 - Responsive images
 - Modern JavaScript features
+- Light/dark theme toggle
 
 ### Customization
 
