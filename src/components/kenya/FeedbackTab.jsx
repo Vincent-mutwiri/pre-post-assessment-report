@@ -74,7 +74,8 @@ const FeedbackTab = () => {
 
   const currentData = feedbackData[selectedDay];
 
-  const MetricCard = ({ title, value, icon: Icon, description, color = 'blue' }) => {
+  // eslint-disable-next-line no-unused-vars
+  const MetricCard = ({ title, value, icon: IconComponent, description, color = 'blue' }) => {
     const colorClasses = {
       blue: 'from-blue-50 to-blue-100 border-blue-200 text-blue-800 bg-white',
       green: 'from-green-50 to-green-100 border-green-200 text-green-800 bg-white',
@@ -87,7 +88,7 @@ const FeedbackTab = () => {
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm font-medium">{title}</CardTitle>
             <div className="p-2 rounded-md bg-white/50">
-              <Icon className={`h-4 w-4 text-${color}-600`} />
+              <IconComponent className={`h-4 w-4 text-${color}-600`} />
             </div>
           </div>
         </CardHeader>
@@ -103,11 +104,12 @@ const FeedbackTab = () => {
     );
   };
 
-  const FeedbackCard = ({ title, icon: Icon, children, className = '' }) => (
+  // eslint-disable-next-line no-unused-vars
+  const FeedbackCard = ({ title, icon: IconComponent, children, className = '' }) => (
     <Card className={className}>
       <CardHeader className="pb-2">
         <CardTitle className="text-lg font-semibold flex items-center gap-2">
-          <Icon className="h-5 w-5" />
+          <IconComponent className="h-5 w-5" />
           {title}
         </CardTitle>
       </CardHeader>

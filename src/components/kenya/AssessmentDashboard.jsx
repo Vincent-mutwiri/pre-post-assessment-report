@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, Cell } from 'recharts';
 import { TrendingUp, Users, Award, BarChart3, Download } from 'lucide-react';
+import { Skeleton } from '@/components/ui/skeleton'
 
 // Sample data - in a real app, this would be loaded from an API
 const performanceData = [
@@ -41,6 +42,12 @@ const performanceStats = {
 
 function AssessmentDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const id = setTimeout(() => setLoading(false), 1000)
+    return () => clearTimeout(id)
+  }, [])
 
   // Prepare data for scatter chart
   const scatterData = performanceData.map(item => ({
@@ -61,6 +68,15 @@ function AssessmentDashboard() {
     if (change > 2000) return 'hsl(var(--ring))';
     return 'hsl(var(--warning))';
   };
+
+  if (loading) {
+    return (
+      <div className="p-8 space-y-4">
+        <Skeleton className="h-8 w-1/3" />
+        <Skeleton className="h-64 w-full" />
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -334,7 +350,7 @@ function AssessmentDashboard() {
                     <tbody>
                       {performanceData
                         .sort((a, b) => b.scoreChange - a.scoreChange)
-                        .map((participant, index) => (
+                        .map((participant) => (
                           <tr key={participant.player} className="border-b hover:bg-accent/50 transition-colors">
                             <td className="p-3 font-medium">{participant.player}</td>
                             <td className="p-3 text-right">{participant.day1Score.toLocaleString()}</td>
