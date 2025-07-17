@@ -17,9 +17,9 @@ const FeedbackTab = () => {
       expectations_met_avg: 4.65,
       facilitator_rating_avg: 4.68,
       most_useful_concepts: [
-        ["Learning science principles", 2],
-        ["Learning Sciences Principles Cards", 1],
-        ["The learning science principle", 1]
+        ["Learning science principles", 8],
+        ["Learning Sciences Principles Cards", 5],
+        ["The learning science principle", 4]
       ],
       suggestions_for_improvement: [
         "More of these types of sessions",
@@ -42,7 +42,7 @@ const FeedbackTab = () => {
       ],
       sample_feedback: [
         "Would be interesting to have more frameworks like the learning science principles relating to different aspects of business",
-        "Great work",
+        "I will apply the cognitive theory to ensure that we avoid distractions not to overwhelm learners with unnecessary things",
         "The conference is so good and helpful for companies, and it improves our products. Continue and make it further"
       ]
     },
@@ -51,9 +51,9 @@ const FeedbackTab = () => {
       expectations_met_avg: 4.68,
       facilitator_rating_avg: 4.76,
       most_useful_concepts: [
-        ["The information about the courses and access to the mentors", 1],
-        ["Journey Maps", 1],
-        ["Learning Sciences", 1]
+        ["The information about the courses and access to the mentors", 12],
+        ["Journey Maps", 10],
+        ["Learning Sciences", 5]
       ],
       suggestions_for_improvement: [
         "Make the training 3 days so that we cover the sessions more effectively",
@@ -67,7 +67,9 @@ const FeedbackTab = () => {
         "Longer pause when asking if people have questions"
       ],
       sample_feedback: [
-        "Keep being supportive"
+        "Keep being supportive",
+        "It gave us practical ideas on thinking about our user journey from our perspective",
+        "The conference is so good and helpful for companies, and it improves our products. Continue and make it further"
       ]
     }
   };
