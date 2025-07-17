@@ -9,7 +9,7 @@ function LandingPage() {
         className="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white"
         style={{
           backgroundImage:
-            "url(public/_M5A6541.jpg)",
+            "url(/_M5A6541.jpg)",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
